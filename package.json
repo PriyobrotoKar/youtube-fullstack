@@ -5,12 +5,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon --env-file .env src/index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.1",
     "prettier": "^3.0.3"
+  },
+  "dependencies": {
+
+    "mongoose": "^8.0.0"
   }
 }
