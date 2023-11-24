@@ -2,9 +2,7 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
   try {
-    const connection = await mongoose.connect(
-      `${process.env.MONGODB_URI}/youtube`
-    );
+    const connection = await mongoose.connect(`${process.env.MONGODB_URI}`);
     console.log(
       "MONGODB connection successfull running at Port : " + process.env.PORT
     );
