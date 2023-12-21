@@ -1,6 +1,7 @@
 import {
   loginUser,
   logoutUser,
+  refreshAccessToken,
   registerUser,
 } from "../controllers/user.controller.js";
 import { Router } from "express";
@@ -20,5 +21,7 @@ router.route("/login").post(loginUser);
 
 //secure api routes
 router.route("/logout").post(verifyJWT, logoutUser);
+
+router.route("/refreshToken").post(verifyJWT, refreshAccessToken);
 
 export default router;
